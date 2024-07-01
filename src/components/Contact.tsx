@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Dot } from "lucide-react";
+import { useGSAP } from "@gsap/react";
 import localFont from "next/font/local";
 
 const manuka = localFont({
@@ -21,12 +22,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const introRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const intro = introRef.current;
-    const image = imageRef.current;
     const paragraph = paragraphRef.current;
 
     if (intro) {
@@ -39,20 +38,6 @@ const Contact = () => {
           stagger: 0.2,
           scrollTrigger: {
             trigger: intro,
-            start: "top 80%",
-          },
-        }
-      );
-    }
-
-    if (image) {
-      gsap.fromTo(
-        image,
-        { scale: 0 },
-        {
-          scale: 1,
-          scrollTrigger: {
-            trigger: image,
             start: "top 80%",
           },
         }
@@ -87,7 +72,6 @@ const Contact = () => {
           Let&apos;s
         </h3>
         <Image
-          ref={imageRef}
           src="/images/seif-mini.webp"
           alt="seif"
           width={300}
