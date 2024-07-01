@@ -102,7 +102,7 @@ const siteMetadata: Metadata = {
       "Experienced web developer offering professional web design and development services.",
   },
   verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
+    google: "DLZONsbmLG7rnzZYuq2BZG8tiYnni9zOYZKQN95ql9w",
   },
 };
 
