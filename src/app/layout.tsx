@@ -7,6 +7,7 @@ import siteMetadata from "@/metadata";
 import jsonLd from "@/jsonLd";
 import Header from "@/components/Header";
 import { Parallax } from "../hooks/useParallaxAnimation";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const instrument = Instrument_Sans({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             </ThemeProvider>
           </AptabaseProvider>
         </Parallax>
+        <SpeedInsights />
         <Script
           id="JSONLD"
           type="application/ld+json"
