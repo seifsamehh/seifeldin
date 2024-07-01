@@ -17,4 +17,10 @@ export const projectData = [
     heading: "Hala Technology",
     linkHref: "https://hala-technology.vercel.app/",
   },
+  {
+    imageSource: "/images/project-4.webp",
+    imageAlt: "project image",
+    heading: "Argor",
+    linkHref: "https://argor.vercel.app/",
+  },
 ];
