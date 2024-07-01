@@ -2,32 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Light Mode Palette */
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 0 0% 10%; /* #1a1a1a */
+    --card: 208.3 100% 56.3%; /* #1E90FF */
+    --card-foreground: 0 0% 10%; /* #1a1a1a */
+    --popover: 210 100% 97.6%; /* #F0F8FF */
+    --popover-foreground: 0 0% 10%; /* #1a1a1a */
+    --primary: 208.3 100% 56.3%; /* #1E90FF */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 207.7 47.8% 46.3%; /* #4682B4 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 240 4.8% 95.9%; /* #E3F2FD */
+    --muted-foreground: 240 3.8% 46.1%; /* #4682B4 */
+    --accent: 210 100% 97.6%; /* #F0F8FF */
+    --accent-foreground: 0 0% 10%; /* #1a1a1a */
+    --destructive: 0 84.2% 60.2%; /* #FF6347 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 210 27% 85.1%; /* #B0C4DE */
+    --input: 210 27% 85.1%; /* #B0C4DE */
+    --ring: 208.3 100% 56.3%; /* #1E90FF */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode Palette */
+    --background: 0 0% 10%; /* #1a1a1a */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --card: 208.3 100% 56.3%; /* #1E90FF  */
+    --card-foreground: 0 0% 10% /* #1a1a1a */
+    --popover: 0 0% 10%; /* #1a1a1a */
+    --popover-foreground: 208.3 100% 56.3%; /* #1E90FF */
+    --primary: 208.3 100% 56.3%; /* #1E90FF */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 207.7 47.8% 46.3%; /* #4682B4 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 240 4.8% 95.9%; /* #E3F2FD */
+    --muted-foreground: 207.7 47.8% 46.3%; /* #4682B4 */
+    --accent: 204.2 93.7% 87.8%; /* #90CAF9 */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 62.8% 30.6%; /* #CC0000 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 204.2 93.7% 87.8%; /* #90CAF9 */
+    --input: 204.2 93.7% 87.8%; /* #90CAF9 */
+    --ring: 208.3 100% 56.3%; /* #1E90FF */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* global components */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  overflow: hidden;
+}
+a,
+img,
+video,
+button,
+h1,
+h2,
+h3 {
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+/* header */
+.light .container .left p {
+  text-shadow: -4px 1px 0px #1a1a1a;
+}
+
+.dark .container .left p {
+  text-shadow: -4px 1px 0px #fff;
+}
+
+/* projects */
+.projects > div:nth-of-type(1) {
+  transform: rotate(-5deg);
+}
+
+.projects > div:nth-of-type(2) {
+  transform: rotate(2deg);
+}
+
+.projects > div:nth-of-type(3) {
+  transform: rotate(10deg);
 }
