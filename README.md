@@ -6,7 +6,6 @@ Welcome to the repository for my personal portfolio website! This project showca
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Contact](#contact)
 
@@ -23,34 +22,15 @@ This portfolio is a reflection of my journey as a frontend developer, illustrati
 
 ## Technologies Used
 
-- **Frontend:** React, JavaScript, HTML5, CSS3, SASS
-- **Libraries & Frameworks:** Bootstrap, GSAP
+- **Frontend:** Next.js, Typescript, HTML5, CSS3
+- **Libraries & Frameworks:** Tailwind CSS, GSAP
 - **Build Tools:** Webpack
 - **Deployment:** Vercel
 
-## Setup and Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/portfolio.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd portfolio
-    ```
-3. Install dependencies:
-    ```bash
-    npm install
-    ```
-4. Start the development server:
-    ```bash
-    npm start
-    ```
-
 ## Usage
 
-Visit [https://seifeldin.vercel.app/](https://seifeldin.vercel.app/) to view the live site. For local development, follow the setup instructions above.
+Visit [https://seifeldin.vercel.app/](https://seifeldin.vercel.app/) to view the live site.
 
 ## Contact
 
-Feel free to reach out to me through the contact form on my portfolio or connect with me on [LinkedIn](https://www.linkedin.com/in/seifeldin/).
+Feel free to reach out to me through the contact form on my portfolio or connect with me on [LinkedIn](https://www.linkedin.com/in/seif-eldin-sameh/).
