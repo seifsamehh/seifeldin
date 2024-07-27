@@ -46,14 +46,14 @@ export default function Header() {
         </div>
         <div className="right flex items-center gap-2">
           <p className="md:flex items-center hidden">
-            Available{" "}
+            Not Available{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               height="40"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#22c55e"
+              stroke="#d62c2f"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
